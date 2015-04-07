@@ -1,0 +1,97 @@
+body{
+	margin: 0px;
+	padding: 0px;
+	background-color: #80CCE6;
+	
+/*font-size: 50px;
+color: #666;*/
+
+}
+header{
+	text-align: center;
+	margin-top: 60px;
+}
+h1{
+	
+	font-family: 'Poiret One',cursive,serif;
+	font-size: 50px;
+	color: #666;
+}
+section{
+	margin-left: 300px;
+
+}
+label{
+	display: block;
+}
+select,input{
+	padding: 5px;
+	width: 100%
+	box-sizzing:border-box;
+}
+
+.choose{
+	margin: 0px;
+	width: 720px;
+	font-size: 24px;
+	padding: 20px 0 20px 20px;	
+	background-color: orange;
+	color: #FFFFFF;
+	display: block;
+}
+.side-icon{
+	background-color:#FFFFFF;
+	width: 20px;
+	height: 20px;
+	margin-left: 450px; 
+	cursor: pointer;
+
+}
+.option-icons{
+	max-width: 700px;
+	padding: 20px 10px 10px 10px;
+	margin-left: 350px;
+	position: absolute;
+
+}
+.boxes{
+	width: 150px;
+	height:150px;
+	color: #FFFFFF;
+	background-color: #006FCC;
+	float: left;
+	margin: 5px;
+	cursor: pointer;
+	text-align: center;
+}
+
+/*.container{
+
+	width: 800px;
+	margin-top: 100px;
+	/*border: 1px solid #FFFFFF;
+}
+.rowfirst{
+	margin-top: 10px;
+}
+a{
+	text-decoration: none;
+}
+.icon{
+	background: rgba(255,175,75,1);
+  	color: #ffffff;
+  	font-size: 100px;
+  	padding: 10px 20px 10px 20px;
+  	text-decoration: none;
+  	margin: 3px; 
+
+}
+.btn{
+	
+}
+.rowsecond{
+	margin-top: 25px;
+}
+.rowthird{
+	margin-top: 25px;
+}*/

@@ -1,0 +1,124 @@
+<script type="text/javascript" src="js/jquery.js"></script>
+
+<script>
+	
+	function ok(){
+
+		var fname = document.getElementById("cnameone").value;
+		var sname = document.getElementById("cnametwo").value;
+		
+		var one=$("#cnameone").val().split('');
+		var one1=$("#cnameone").val().split('');
+		var two=$("#cnametwo").val().split('')
+
+		for (i in one){
+			if(two.indexOf(one[i])!=-1){
+				two.splice(two.indexOf(one[i]),1);
+				one1.splice(one1.indexOf(one[i]),1);
+			}
+		}
+		
+		var num = one1.length+two.length;
+		/*alert(num);*/
+		var jsobj={}
+		jsobj['fname']=fname;
+		jsobj['sname']=sname;
+
+		$.ajax({
+					url:"flames.php?fn="+JSON.stringify(jsobj)+"",
+		    		success: function(result){
+            		/*alert(result);*/
+            		var BMI = result.split('*');
+            		document.getElementById("fimg").innerHTML='<img src="'+BMI[0]+'">';
+            		document.getElementById("simg").innerHTML ='<img src="'+BMI[1]+'">';
+            	}
+            });
+		var s=['Friendship','Love','Affection','Marriage','Enemies','Sister'];
+		
+		while(s.length>1){
+			if(num<s.length){
+				s.splice(num-1,1);
+			}
+			else{
+				var rem=num%s.length;
+				s.splice(rem-1,1);
+			}
+			/*alert(s);*/
+
+		}/*switch (s){
+			case "Friendship":
+			console.log("Oranges are $0.59 a pound.");
+			break;
+			case "Love":
+			document.getElementById("out").innerHTML='ll';
+			break;
+			case "Affection":
+			document.getElementById("out").innerHTML='af';
+			break;
+			case "Marriage":
+			document.getElementById("out").innerHTML='ma';
+			break;
+			case "Enemies":
+			document.getElementById("out").innerHTML='en';
+			break;
+			case "Sister":
+			document.getElementById("out").innerHTML='ss';
+			break;
+			default:
+        	alert("nothing");
+
+		}*/
+		
+		document.getElementById("coutput").innerHTML="<h1><font color=green><b>"+s+"</b></font></h1>";
+		if(s=="Friendship"){
+			document.getElementById("out").innerHTML='<img src="friends.jpg" width="100px" height="100px">';
+		}
+		if(s=="Love"){
+			document.getElementById("out").innerHTML='<img src="little-heart-md.png" width="100px" height="100px">';
+		}
+		if(s=="Affection"){
+			document.getElementById("out").innerHTML='<img src="a3408s11281.jpg" width="100px" height="100px">';
+		}
+		if(s=="Marriage"){
+			document.getElementById("out").innerHTML='<img src="marriage.jpg" width="100px" height="100px">';
+		}
+		if(s=="Enemies"){
+			document.getElementById("out").innerHTML='<img src="Enemies.jpg" width="100px" height="100px">';
+		}
+		if(s=="Sister"){
+			document.getElementById("out").innerHTML='<img src="sister.jpg" width="100px" height="100px">';
+		}
+	}
+</script>
+
+
+
+
+<table width="500" align="center" cellpadding="3" id="lovecalc">
+<form>
+<tr>
+	<td align="center">Name of Person 1</td>
+	
+	<td align="center">Name of Person 2</td>
+	<td align="center"></td>
+</tr>
+<tr>
+	<td align="center"><input type="text" name="cnameone" size="25" id="cnameone"></td>
+	
+	<td align="center"><input type="text" name="cnametwo" size="25" id="cnametwo"></td>
+	<td align="center"><input type="button" value="calculate" onclick="ok()"></td>
+
+</tr>
+<tr>
+	<td align="center"><span id="fimg"></span></td>
+	<td align="center"><span id="simg"></span></td>
+</tr>
+<tr>
+	<td align="center" colspan="3"><div id="coutput"></div></td>
+</tr>
+<tr>
+	<td align="center" colspan="3"><span id="out"></span></td>
+</tr>
+
+</form>
+</table>

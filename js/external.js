@@ -1,0 +1,62 @@
+$(document).ready(function(){
+	$("#sideicon").click(function(){
+		$("#optionicons").toggle();		
+		$("#agecal").hide();
+		$("#lovecalc").hide();
+		$("#doy").hide();
+		$("#flames").hide();
+		$("#country").hide();
+		$("#bodymass").hide();
+		$("#allconvertions").hide();
+		/*$("#home").toggle("slide",1000);*/
+	});
+	$("#box1").click(function(){
+		$("#optionicons").hide();
+		$("#agecal").show();
+	});
+	$("#box2").click(function(){
+		$("#optionicons").hide();
+		$("#lovecalc").show();
+	});
+	$("#box3").click(function(){
+		$("#optionicons").hide();
+		$("#doy").show();
+	});
+	$("#box4").click(function(){
+		$("#optionicons").hide();
+		$("#flames").show();
+	});
+	$("#box5").click(function(){
+		$("#optionicons").hide();
+		$("#country").show();
+	});
+	$("#box6").click(function(){
+		$("#optionicons").hide();
+		$("#bodymass").show();
+	});
+	$("#box7").click(function(){
+		$("#optionicons").hide();
+		$("#allconvertions").show();
+	});
+	$("#box8").click(function(){
+		$("#optionicons").hide();
+	});
+	$("#box9").click(function(){
+		$("#optionicons").hide();
+	});
+	$("#box10").click(function(){
+		$("#optionicons").hide();
+	});
+	$("#box11").click(function(){
+		$("#optionicons").hide();
+	});
+	$("#box12").click(function(){
+		$("#optionicons").hide();
+	});
+	
+	 $('#Reset').click(function(){
+        $("input[type=text]").val("");
+  });
+
+
+});

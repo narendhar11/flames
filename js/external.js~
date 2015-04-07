@@ -1,0 +1,6 @@
+$(document).ready(function(){
+	$("#bt").click(function(){
+		//$("#row-container").hide();
+		$("#home").toggle("slide",1000);
+	});
+});
